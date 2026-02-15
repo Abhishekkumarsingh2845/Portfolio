@@ -1,0 +1,32 @@
+# CodeRabbit Configuration
+# For more information, visit https://docs.coderabbit.ai/getting-started/configure-coderabbit
+
+version: "1"
+language: "en-US"
+
+# Review settings
+reviews:
+  # Enable high-level summary of the pull request
+  summary: true
+  # Enable technical walkthrough of the changes
+  walkthrough: true
+  # Enable line-by-line comments for suggestions and issues
+  line_comments: true
+  # Enable automated code reviews for every pull request
+  auto_review: true
+
+# Custom instructions for CodeRabbit to follow during reviews
+# You can add project-specific rules here
+instructions: |
+  - Ensure all components are functional and follow React best practices.
+  - Check for proper usage of Tailwind CSS classes.
+  - Verify that Three.js and Framer Motion animations are performant.
+  - Ensure responsive design is maintained across all components.
+  - Suggest accessibility improvements where applicable.
+
+# File path patterns to exclude from reviews
+exclude:
+  - "node_modules/**"
+  - "dist/**"
+  - "*.lock"
+  - "public/**"
